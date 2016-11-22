@@ -6,4 +6,4 @@
 * 
 * 
 
-The project incorporates knowledge of basic JavaScript syntax including variables, loops and object literals.
+[Summary of what this project entails]
