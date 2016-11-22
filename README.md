@@ -6,4 +6,4 @@
 * Randomly change the background color of the page when the quote changes.
 * Don't display a random quote more than once until all quotes from the array have been displayed.
 
-The project incorporates knowledge of basic JavaScript syntax including variables, loops and object literals.
+*The project incorporates knowledge of basic JavaScript syntax including variables, loops and object literals.*
