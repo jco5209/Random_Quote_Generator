@@ -4,10 +4,10 @@
 	var bdyColor = document.getElementsByTagName('body')[0];
 	var loadBar = document.getElementById('loading-bar').style;
 
-	// Variabled used to clearInterval(loadBarInt)
+	// Variable used to clearInterval(loadBarInt)
 	var loadBarInt;
 
-	// Array used quotes to be pushed to 
+	// Shown quotes to be pushed here 
 	var staleQuotes = [];
 
 	var quotes = [
@@ -82,7 +82,7 @@
 	}
 
 
-	// Determine how many category boxes are selected using checkedCategoreies() length - use indice to return categories selected
+	// See how many category boxes are selected
 	function categoryCheck(quoteFilter) {
 
 		if(checkedCategories().length == 1) {
@@ -95,7 +95,8 @@
 
 	}
 
-	// Generates a random number between 0 and the length of filtered quotes - Uses that random number to return a random, categorically filtered quote
+	// Generates a random number between 0 and the length of filtered quotes 
+	// Uses that random number to return a random, categorically filtered quote
 	function getRandomQuote() {
 		var rng = Math.floor((Math.random() * quotes.filter(categoryCheck).length) + 0);
 		return quotes.filter(categoryCheck)[rng];
@@ -121,7 +122,7 @@
 	/*
 		Function recieves most recently displayed quote
 		Determines array index position of that quote
-		Removes that quote and stores it in staleQuote array
+		Pushes that quote into staleQuote array
 		If quote array is empty, concat the staleQuotes array to the quotes array & empty staleQuotes
 	*/
 	function freshQuotes(stale) {
@@ -145,7 +146,7 @@
 	// New quote generation on a 15 second interval - Also restarts loadingBar()
 	var quoteSlider = setInterval(function() {printQuote(); loadingBarRestart();}, 15000);
 
-	// Visual indicator for when a new quote will be generated - Uses styling properties to increase a div's width per increment
+	// Indicator for when a new quote will be shown
 	function loadingBar() {
 		(function() {
 		var i = 0;
@@ -169,7 +170,7 @@
 	}
 
 
-	// Event listener to respond to "Show another quote" button clicks - When user clicks anywhere on the button, the "printQuote" function is called
+	// Event listener to respond to "Show another quote" button clicks
 	document.getElementById('loadQuote').addEventListener("click", function() {
 		printQuote();
 		quoteSliderRestart();
